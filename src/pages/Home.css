@@ -1,0 +1,989 @@
+/* =========================
+   기본 설정
+========================= */
+
+.home-page,
+.home-page * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.home-page {
+    font-family:
+        "Pretendard",
+        "Noto Sans KR",
+        Arial,
+        sans-serif;
+
+    background: #f5f7fb;
+    color: #121a2b;
+}
+
+/* =========================
+   상단 메뉴
+========================= */
+
+.home-page .navbar {
+
+    width: 100%;
+
+    padding: 25px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #f5f7fb;
+}
+
+.home-page .logo {
+    font-size: 26px;
+    font-weight: 800;
+    color: #121a2b;
+    letter-spacing: -1px;
+}
+
+.home-page .logo span {
+    color: #f04b8a;
+}
+
+
+.home-page .navbar nav {
+
+    display: flex;
+    gap: 35px;
+}
+
+
+.home-page .navbar nav a {
+
+    text-decoration: none;
+
+    color: #222b3d;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+
+.home-page .navbar nav a:hover {
+
+    color: #f04b8a;
+}
+
+
+/* =========================
+   메인 영역
+========================= */
+
+.home-page .hero {
+
+    min-height: 650px;
+
+    padding: 60px 7% 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 70px;
+
+    background: #f5f7fb;
+}
+
+
+/* =========================
+   왼쪽 텍스트
+========================= */
+
+.home-page .hero-text {
+
+    flex: 1;
+    max-width: 650px;
+}
+
+
+.home-page .tag {
+
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    border-radius: 30px;
+
+    background: #dbe9ff;
+
+    color: #f04b8a;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 35px;
+}
+
+
+.home-page .hero-text h1 {
+
+    font-size: 58px;
+
+    line-height: 1.18;
+
+    letter-spacing: -2px;
+
+    color: #121a2b;
+
+    margin-bottom: 35px;
+}
+
+
+.home-page .description {
+
+    max-width: 620px;
+
+    font-size: 20px;
+
+    line-height: 1.9;
+
+    color: #65748b;
+}
+
+
+/* =========================
+   카메라 미리보기
+========================= */
+
+.home-page .preview {
+
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+.home-page .camera-box {
+
+    width: 100%;
+
+    max-width: 620px;
+
+    height: 410px;
+
+    border-radius: 28px;
+
+    background: #111827;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow:
+        0 20px 45px rgba(30, 41, 59, 0.15);
+}
+
+
+.home-page .camera-icon {
+
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+
+    background: #f04b8a;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 45px;
+
+    margin-bottom: 28px;
+}
+
+
+.home-page .camera-title {
+
+    color: white;
+
+    font-size: 24px;
+    font-weight: 700;
+
+    margin-bottom: 13px;
+}
+
+
+.home-page .camera-description {
+
+    color: #8fb2df;
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   기능 선택 영역
+========================= */
+
+.home-page .mode-section {
+
+    padding: 110px 7%;
+
+    text-align: center;
+
+    background: white;
+}
+
+
+.home-page .small-title {
+
+    color: #f04b8a;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 14px;
+}
+
+
+.mode-section h2,
+.home-page .process h2 {
+
+    font-size: 38px;
+
+    color: #121a2b;
+
+    margin-bottom: 65px;
+}
+
+
+/* =========================
+   기능 두 개 나란히
+========================= */
+
+.home-page .mode-container {
+
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 110px;
+}
+
+
+.home-page .mode-item {
+
+    width: 420px;
+
+    text-align: center;
+}
+
+
+/* 숫자 */
+
+.home-page .mode-number {
+
+    width: 58px;
+    height: 58px;
+
+    margin: 0 auto 25px;
+
+    border-radius: 50%;
+
+    background: #ffe4ee;
+
+    color: #f04b8a;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 16px;
+    font-weight: 800;
+}
+
+
+/* 제목 */
+
+.home-page .mode-item h3 {
+
+    font-size: 27px;
+
+    margin-bottom: 20px;
+
+    color: #121a2b;
+}
+
+
+/* 설명 */
+
+.home-page .mode-item p {
+
+    min-height: 130px;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+    color: #66758b;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   기능 버튼
+========================= */
+
+.home-page .mode-button {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 185px;
+
+    padding: 15px 28px;
+
+    border-radius: 12px;
+
+    background: #f04b8a;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    box-shadow:
+        0 10px 20px rgba(240, 75, 138, 0.18);
+
+    transition: 0.2s;
+}
+
+
+.home-page .mode-button:hover {
+
+    background: #df3678;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 14px 24px rgba(240, 75, 138, 0.25);
+}
+
+
+/* =========================
+   HOW IT WORKS
+========================= */
+
+.home-page .process {
+
+    padding: 110px 7%;
+
+    text-align: center;
+
+    background: #f5f7fb;
+}
+
+
+.home-page .cards {
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 30px;
+}
+
+
+.home-page .card {
+
+    width: 280px;
+
+    min-height: 250px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 35px 28px;
+
+    box-shadow:
+        0 12px 30px rgba(30, 41, 59, 0.08);
+}
+
+
+.home-page .card span {
+
+    display: inline-block;
+
+    color: #f04b8a;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    margin-bottom: 25px;
+}
+
+
+.home-page .card h3 {
+
+    font-size: 23px;
+
+    margin-bottom: 18px;
+
+    color: #121a2b;
+}
+
+
+.home-page .card p {
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    color: #65748b;
+}
+
+
+.home-page .arrow {
+
+    font-size: 32px;
+
+    color: #f04b8a;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+.home-page .footer {
+
+    padding: 35px;
+
+    text-align: center;
+
+    background: #111827;
+
+    color: #9ba8bb;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   태블릿
+========================= */
+
+@media (max-width: 1050px) {
+
+    .home-page .hero {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    .home-page .hero-text {
+
+        max-width: 750px;
+    }
+
+
+    .home-page .description {
+
+        margin: 0 auto;
+    }
+
+
+    .home-page .preview {
+
+        width: 100%;
+    }
+
+
+    .home-page .camera-box {
+
+        max-width: 750px;
+    }
+
+
+    .home-page .mode-container {
+
+        gap: 50px;
+    }
+
+}
+
+
+/* =========================
+   모바일
+========================= */
+
+@media (max-width: 768px) {
+
+    .home-page .navbar {
+
+        padding: 20px 5%;
+    }
+
+
+    .home-page .logo {
+
+        font-size: 21px;
+    }
+
+
+    .home-page .navbar nav {
+
+        gap: 18px;
+    }
+
+
+    .home-page .hero {
+
+        padding: 50px 5% 80px;
+    }
+
+
+    .home-page .hero-text h1 {
+
+        font-size: 42px;
+    }
+
+
+    .home-page .description {
+
+        font-size: 17px;
+    }
+
+
+    .home-page .camera-box {
+
+        height: 320px;
+    }
+
+
+    .mode-section,
+    .home-page .process {
+
+        padding: 80px 5%;
+    }
+
+
+    .mode-section h2,
+    .home-page .process h2 {
+
+        font-size: 30px;
+    }
+
+
+    .home-page .mode-container {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 75px;
+    }
+
+
+    .home-page .mode-item {
+
+        width: 100%;
+
+        max-width: 450px;
+    }
+
+
+    .home-page .mode-item p {
+
+        min-height: auto;
+    }
+
+
+    .home-page .cards {
+
+        flex-direction: column;
+
+        gap: 25px;
+    }
+
+
+    .home-page .card {
+
+        width: 100%;
+
+        max-width: 400px;
+    }
+
+
+    .home-page .arrow {
+
+        transform: rotate(90deg);
+    }
+
+}
+
+/* =========================
+   메인 CTA 버튼
+========================= */
+.home-page .hero-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 38px;
+    padding: 17px 30px;
+    border-radius: 12px;
+    background: #f04b8a;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 700;
+    box-shadow: 0 10px 24px rgba(240, 75, 138, 0.22);
+    transition: 0.2s;
+}
+
+.home-page .hero-button:hover {
+    background: #df3678;
+    transform: translateY(-3px);
+    box-shadow: 0 14px 28px rgba(240, 75, 138, 0.30);
+}
+
+.home-page .hero-button span {
+    font-size: 20px;
+    transition: transform 0.2s;
+}
+
+.home-page .hero-button:hover span {
+    transform: translateX(4px);
+}
+
+/* Hero와 HOW IT WORKS 영역 구분 */
+.home-page .process {
+    background: #ffffff;
+}
+
+.home-page .logo {
+    text-decoration: none;
+}
+
+/* =====================================================
+   HERO - 실시간 수어 인식 시작 버튼
+===================================================== */
+
+.home-page .hero-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 38px;
+
+    padding: 17px 30px;
+
+    border-radius: 12px;
+
+    background: #f04b8a;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    box-shadow:
+        0 10px 24px rgba(240, 75, 138, 0.22);
+
+    transition: 0.2s;
+}
+
+
+.home-page .hero-button:hover {
+    background: #df3678;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 14px 28px rgba(240, 75, 138, 0.30);
+}
+
+
+.home-page .hero-button span {
+    font-size: 20px;
+
+    transition: transform 0.2s;
+}
+
+
+.home-page .hero-button:hover span {
+    transform: translateX(4px);
+}
+
+
+
+/* =====================================================
+   CAMERA PREVIEW
+===================================================== */
+
+.home-page .camera-box {
+    position: relative;
+
+    width: 100%;
+    max-width: 620px;
+    height: 410px;
+
+    border-radius: 28px;
+
+    background: #111827;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 45px rgba(30, 41, 59, 0.15);
+}
+
+
+
+/* 실제 웹캠 영상 */
+
+.home-page .hero-camera {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    /*
+       사용자가 거울을 보는 것처럼
+       좌우 반전
+    */
+    transform: scaleX(-1);
+}
+
+
+
+/* 좌측 상단 CAMERA PREVIEW */
+
+.home-page .camera-overlay {
+    position: absolute;
+
+    top: 20px;
+    left: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 8px 13px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(17, 24, 39, 0.68);
+
+    backdrop-filter: blur(8px);
+
+    color: white;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* 핑크 LIVE 점 */
+
+.home-page .live-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #f04b8a;
+
+    box-shadow:
+        0 0 0 4px rgba(240, 75, 138, 0.15);
+}
+
+
+
+/* 카메라 아래쪽 안내 */
+
+.home-page .camera-bottom {
+    position: absolute;
+
+    left: 20px;
+    bottom: 20px;
+
+    padding: 9px 14px;
+
+    border-radius: 10px;
+
+    background:
+        rgba(17, 24, 39, 0.65);
+
+    backdrop-filter: blur(8px);
+
+    color: rgba(255, 255, 255, 0.92);
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+
+/* =====================================================
+   CAMERA ERROR
+===================================================== */
+
+.home-page .camera-error {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+.home-page .camera-error-icon {
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+
+    background: #f04b8a;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 45px;
+
+    margin-bottom: 28px;
+}
+
+
+.home-page .camera-error .camera-title {
+    color: white;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    margin-bottom: 13px;
+}
+
+
+.home-page .camera-error .camera-description {
+    color: #8fb2df;
+
+    font-size: 15px;
+}
+
+
+
+/* =====================================================
+   HOW IT WORKS
+===================================================== */
+
+.home-page .process {
+    background: #ffffff;
+}
+
+
+
+/* 카드가 흰 배경에서 구분되도록 */
+
+.home-page .card {
+    background: #f8f9fc;
+
+    border:
+        1px solid #eef0f5;
+
+    box-shadow:
+        0 12px 30px rgba(30, 41, 59, 0.06);
+}
+
+
+
+/* =====================================================
+   CAMERA 반응형
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .home-page .camera-box {
+        height: 320px;
+    }
+
+
+    .home-page .camera-overlay {
+        top: 15px;
+        left: 15px;
+    }
+
+
+    .home-page .camera-bottom {
+        left: 15px;
+        bottom: 15px;
+    }
+
+
+    .home-page .hero-button {
+        margin-top: 30px;
+
+        padding: 15px 25px;
+
+        font-size: 15px;
+    }
+
+}

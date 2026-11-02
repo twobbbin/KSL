@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Language Translator</title>
+  <meta name="description" content="실시간 수어 동작 인식 및 텍스트/음성 번역 웹 애플리케이션 UI" />
+  <meta property="og:title" content="Sign Language Translator" />
+  <meta property="og:description" content="실시간 수어 동작 인식 및 텍스트/음성 번역 웹 애플리케이션 UI" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Pretendard:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <!-- MediaPipe CDN Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+</head>
+
+<body
+  class="bg-[#FFF5F7] text-slate-800 antialiased selection:bg-pink-200 selection:text-pink-900 font-['Pretendard','Noto_Sans_KR',sans-serif]">
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>

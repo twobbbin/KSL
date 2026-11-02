@@ -1,0 +1,10 @@
+{
+  "name": "핑크 수어 번역기 (Pink Sign Language Translator)",
+  "description": "실시간 수어 동작 인식 및 텍스트/음성 번역 웹 애플리케이션 UI",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
