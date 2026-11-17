@@ -52,31 +52,44 @@ PC와 모바일 웹 환경을 지원하도록 설계하여 별도의 애플리�
 
 ## 4. 시스템 아키텍처
 
-```text
-[PC / Mobile Browser]
-         |
-         v
-[React Web Application]
-         |
-         | Camera Frame (JPEG)
-         | WebSocket
-         v
-[Python AI Server]
-         |
-         v
-[MediaPipe Landmark Extraction]
-         |
-         v
-[Bi-LSTM + Attention Model]
-         |
-         v
-[Sign Language Prediction]
-         |
-         v
-[Sentence Generation / Gemini]
-         |
-         v
-[Text / Speech Output]
+
+flowchart TD
+    subgraph CLIENT["Frontend | React · Vite · Tailwind CSS"]
+        A["PC / Mobile Browser"]
+        B["Camera API<br/>실시간 영상 입력"]
+        C["MediaPipe Hands<br/>손 랜드마크 시각화"]
+        D["Canvas API<br/>JPEG 프레임 변환"]
+        UI["번역 결과 UI<br/>텍스트 · 신뢰도 · 음성 출력"]
+        A --> B
+        B --> C
+        B --> D
+    end
+
+    subgraph NETWORK["Network | HTTPS · WSS · WebSocket"]
+        T["Cloudflare Tunnel<br/>모바일 HTTPS 접속"]
+        P["Vite WebSocket Proxy<br/>/ws → localhost:8765"]
+    end
+
+    subgraph SERVER["Backend | Python · asyncio · websockets"]
+        WS["WebSocket 서버<br/>영상 프레임 수신"]
+        CV["OpenCV<br/>영상 디코딩 및 전처리"]
+        MP["MediaPipe Tasks<br/>손 · 포즈 랜드마크 추출"]
+        PRE["시계열 데이터 구성<br/>30 Frames × 225 Features"]
+        AI["TensorFlow / Keras<br/>Bi-LSTM + Attention"]
+        POST["예측 후처리<br/>신뢰도 · 연속 예측 안정화"]
+        SENT["인식 단어 누적"]
+        GEM["Gemini API<br/>자연어 문장 생성"]
+        WS --> CV --> MP --> PRE --> AI --> POST --> SENT --> GEM
+    end
+
+    A -. "모바일 접속" .-> T
+    T -. "HTTPS" .-> A
+    D -->|"JPEG / WebSocket"| P
+    P -->|"WS"| WS
+    POST -->|"예측 단어 · 신뢰도"| UI
+    GEM -->|"번역 문장"| UI
+    UI -->|"브라우저 TTS"| OUT["음성 출력"]
+
 ```
 
 개발 환경에서는 Vite WebSocket Proxy와 Cloudflare Tunnel을 활용하여 모바일 HTTPS 환경에서도 Python AI 서버에 접근할 수 있도록 구성했습니다.
